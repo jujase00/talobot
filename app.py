@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-client = OpenAI()
+client = OpenAI(os.getenv("OPENAI_API_KEY"))
 
 @app.route('/')
 def index():
